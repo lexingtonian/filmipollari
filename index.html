@@ -6,6 +6,12 @@
   <body>
     <p></p>
  
+	  
+	  
+	  <script>
+// Edit your script here
+
+</script>
 <!-- edit your html here -->
 <p>Kirjoita aikomasi viesti tähän laatikkoon:</p>
 
@@ -41,7 +47,10 @@ function myFunction() {
     		case "nikon": words[i]="Smena"; break;
             case "canon": words[i]="Smena"; break;
             case "leica": words[i]="Smena"; break;
-	    case "smena": words[i]="Smena, tuo Neuvostoliiton lahja maailman työtätekeville ja taiteileville "; break;
+            case "smena": words[i]="Smena, tuo Neuvostoliiton lahja maailman työtätekeville ja taiteileville "; break;
+            case "smenassa": words[i]="smenassa :-)"; break;
+            case "foma": words[i]="naarmu"; break;
+            case "fomaa": words[i]="naarmuja"; break;
             case "ari": words[i]="The Man"; break;
             case "vittu": words[i]="ylläpito"; break;
             case "vitun": words[i]="ylläpidon"; break;
@@ -68,22 +77,24 @@ function myFunction() {
     
     }
     var new_words = words.join(' ');
-    //words.join(" ");
-	
-    //document.write(i);
     
     document.write("OLIT EREHDYKSESSÄ EHDOTTAMASSA SEURAAVAA POSTAUSTA: <BR><BR>");
     document.write(strOriginal);
-    //document.write(finalString);
+ 
     document.write("<BR><BR><BR>TIETOKONE SUOSITTELEE SEURAAVAA HUOMATTAVASTI SOSIAALISESTI OSAAOTTAVAMPAA POSTAUSTA: <BR><BR>");
     document.write(new_words);
   
   	numero = Math.random();
   	if (numero < 0.2) document.write(" ja ihan vaan leikilläni sanon, ei sarkasmia!");
-    //document.write(" <BR><BR>KOPIO EDELLINEN FILMIKUVAUSRYHMÄÄN NIIN INTERNET EI  LOUKKAANNU");
+
 
 }
 </script>
+	  
+	  
+	  
+	  
+	  
     
   </body>
 </html>
