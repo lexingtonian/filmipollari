@@ -8,11 +8,6 @@
  
 	  
 	  
-
-	  <script>
-// Edit your script here
-
-</script>
 <!-- edit your html here -->
 <p>Kirjoita aikomasi viesti tähän laatikkoon:</p>
 
@@ -37,14 +32,12 @@ function myFunction() {
   //document.write(res);
   var punctuationless = str.replace(/[.,\/#!!$%\^&\*;:{}=\-_`~()]/g,"");
 	var finalString = punctuationless.replace(/\s{2,}/g," ");
-	//var words = str.split(" ");
     var words = finalString.split(" ");
-   
- 
     //korjaa teksti
+    var k = 0; //kuinka monta korjataan)
 	for (var i = 0; i < words.length; i++) {
     	switch(words[i]) {
-        	case "filmi": words[i]="perinteinen anaooginen kuvantallennusformaatti"; break;
+        	case "filmi": words[i]="perinteinen analooginen kuvantallennusformaatti"; break;
   		   	case "filmiä": words[i]="just sitä perinteistä sielua kohottavaa kuvantallennusformaattia"; break;
             case "digi": words[i]="ana"; break;
     		case "nikon": words[i]="Smena"; break;
@@ -72,17 +65,25 @@ function myFunction() {
             case "kommentti": words[i]="nöyrä viesti"; break;
             case "viesti": words[i]="alustava hauras ehdotelma"; break;
             case "ja": words[i]="ja sen lisäksi ystävällisesti vielä"; break;
-            case "että": words[i]="jotta"; break;  
+            case "että": words[i]="jotta"; break; 
+            case "paska": words[i]="kakka"; break;
+            case "kamera": words[i]="valokuvauskone"; break;
             case "testaan": words[i]="hauraasti vapisen ja yritän"; break;  
   		default:
+        	k++;
         	numero = Math.random();
+            if (numero < 0.2) k--;
        	 	if (numero < 0.2) words[i]="anteeksi";
-       		if (numero < 0.1) words[i]="jos ylläpidon tyypeille vaan sopii";	
+       		if (numero < 0.1) words[i]="ja toivon että en loukannut ketään";	
+            if (numero < 0.05) words[i]="vitsi, vitsi";
+            if (numero < 0.01) words[i]="(tähän väliin haluaisin tunnustaa, että olen kakannut luontoon)";
         }
     
     }
     var new_words = words.join(' ');
-    //if (i==1) new_words = "Mulla just nyt ei ole mitään sanottavaa, mutta olen mukana tunteella!";
+   
+    //document.write(strOriginal.split(' ').length);
+    //if (strOriginal.split('').length==1) new_words = "Mulla just nyt ei ole mitään sanottavaa, mutta olen mukana tunteella!";
     
     document.write("OLIT EREHDYKSESSÄ EHDOTTAMASSA SEURAAVAA POSTAUSTA: <BR><BR>");
     document.write(strOriginal);
